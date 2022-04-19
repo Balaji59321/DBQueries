@@ -2,10 +2,10 @@
 
 Exercise 1 — Tasks
 
-1.Find the title of each film
+1.Find the title of each film :
 SELECT title FROM movies;
 
-2.Find the director of each film
+2.Find the director of each film :
 SELECT director FROM movies;
 
 3.Find the title and director of each film
