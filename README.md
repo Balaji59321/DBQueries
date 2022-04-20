@@ -72,6 +72,58 @@ SELECT * FROM movies order by title limit 5 offset 5;
 
  Review 1 — Tasks 
 
-1.List all the Canadian cities and their populations  
+1.List all the Canadian cities and their populations   
+SELECT * FROM north_american_cities where country = "Canada";
+
+2.Order all the cities in the United States by their latitude from north to south 
+SELECT * FROM north_american_cities where country = "United States" order by latitude desc;
+
+3.List all the cities west of Chicago, ordered from west to east   
+SELECT * FROM north_american_cities where longitude < -87.629798 order by longitude;
+
+4.List the two largest cities in Mexico (by population)   
+SELECT * FROM north_american_cities where country = "Mexico" order by population desc limit 2;
+
+5.List the third and fourth largest cities (by population) in the United States and their population    
+SELECT * FROM north_american_cities where country = "United States" order by population desc limit 2 offset 2;
+
+<img width="1272" alt="Screen Shot 2022-04-20 at 8 52 19 AM" src="https://user-images.githubusercontent.com/26063120/164145298-658fe9e5-75ff-472d-8524-d77766a1c6f2.png">
+
+
+Exercise 6 — Tasks
+
+1.Find the domestic and international sales for each movie   
+SELECT distinct * FROM movies inner join boxoffice on boxoffice.movie_id = movies.id;
+
+2.Show the sales numbers for each movie that did better internationally rather than domestically   
+SELECT distinct * FROM movies inner join boxoffice on boxoffice.movie_id = movies.id where boxoffice.international_sales > domestic_sales;
+
+3.List all the movies by their ratings in descending order  
+SELECT distinct * FROM movies inner join boxoffice on boxoffice.movie_id = movies.id order by boxoffice.rating desc;
+
+<img width="1258" alt="Screen Shot 2022-04-20 at 9 05 27 AM" src="https://user-images.githubusercontent.com/26063120/164145364-8f8796dc-1f8c-4554-a26c-33a8da18630a.png">
+
+
+Exercise 7 — Tasks
+
+1. Find the list of all buildings that have employees   
+SELECT building FROM employees left join buildings on employees.building = buildings.building_name group by building;
+
+2.Find the list of all buildings and their capacity   
+Select * from buildings;
+
+3.List all buildings and the distinct employee roles in each building (including empty buildings) 
+Select * from buildings left join employees on employees.building = buildings.building_name group by role,building_name
+
+<img width="1268" alt="Screen Shot 2022-04-20 at 10 09 23 AM" src="https://user-images.githubusercontent.com/26063120/164152034-2ee91072-c83d-4653-ad04-f8e8b43270c3.png">
+
+
+Exercise 8 — Tasks 
+
+1.Find the name and role of all employees who have not been assigned to a building
+SELECT name,role FROM employees where Building is null;
+
+2.
+
 
 
