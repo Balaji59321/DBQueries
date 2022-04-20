@@ -195,13 +195,13 @@ insert into boxoffice values (4,8.7,34000000,27000000);
 
 Exercise 14 — Tasks  
  
-1.The director for A Bug's Life is incorrect, it was actually directed by John Lasseter    
+1.The director for A Bug's Life is incorrect, it was actually directed by John Lasseter      
 update movies set director = "John Lasseter" where id =2;
 
-2.The year that Toy Story 2 was released is incorrect, it was actually released in 1999
+2.The year that Toy Story 2 was released is incorrect, it was actually released in 1999    
 update movies set year = "1999" where id =3;
 
-3.Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich
+3.Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich     
 update movies set director = "Lee Unkrich",title = "Toy Story 3" where id =11;
 
 <img width="1263" alt="Screen Shot 2022-04-20 at 11 09 30 AM" src="https://user-images.githubusercontent.com/26063120/164158156-7b049fd7-be2e-4e77-9939-104fcb50ab9a.png">
@@ -209,10 +209,10 @@ update movies set director = "Lee Unkrich",title = "Toy Story 3" where id =11;
 
 Exercise 15 — Tasks
 
-1.This database is getting too big, lets remove all movies that were released before 2005. 
+1.This database is getting too big, lets remove all movies that were released before 2005.       
 delete from movies where year < 2005;
 
-2.Andrew Stanton has also left the studio, so please remove all movies directed by him. 
+2.Andrew Stanton has also left the studio, so please remove all movies directed by him.       
 delete from movies where director = "Andrew Stanton";
 
 <img width="1259" alt="Screen Shot 2022-04-20 at 11 11 08 AM" src="https://user-images.githubusercontent.com/26063120/164158385-bd80359e-1819-4dee-9024-bff0a56f2b5b.png">
@@ -225,7 +225,7 @@ Exercise 16 — Tasks
 – Name A string (text) describing the name of the database
 – Version A number (floating point) of the latest version of this database
 – Download_count An integer count of the number of times this database was downloaded
-This table has no constraints. 
+This table has no constraints.     
 create table Database (Name varchar(255),Version float,Download_count INT)
 
 <img width="1251" alt="Screen Shot 2022-04-20 at 11 13 48 AM" src="https://user-images.githubusercontent.com/26063120/164158766-a77d70e7-ac81-4b7d-ac5a-023b51a8af8d.png">
@@ -233,10 +233,10 @@ create table Database (Name varchar(255),Version float,Download_count INT)
 
 Exercise 17 — Tasks
 
-1.Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in. 
-alter table movies add column Aspect_ratio float;
+1.Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.       
+alter table movies add column Aspect_ratio float; 
 
-2.Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English. 
+2.Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.      
 alter table movies add column Language varchar(255) Default "English";
 
 <img width="1259" alt="Screen Shot 2022-04-20 at 11 17 42 AM" src="https://user-images.githubusercontent.com/26063120/164159155-b4ca5400-a7aa-4e03-9ca4-f65cecb32308.png">
@@ -244,10 +244,10 @@ alter table movies add column Language varchar(255) Default "English";
 
 Exercise 18 — Tasks
 
-1.We've sadly reached the end of our lessons, lets clean up by removing the Movies table 
+1.We've sadly reached the end of our lessons, lets clean up by removing the Movies table      
 drop table movies;
 
-2.And drop the BoxOffice table as well 
+2.And drop the BoxOffice table as well      
 drop table boxoffice;
 
 
